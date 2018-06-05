@@ -1,0 +1,14 @@
+var command = "raspistill --nopreview -w 600 -h 500 -ex auto -co 0 " +
+        "-q 10 -o ~/remotePaintingMachine/camera/frames/" + id + ".jpg -tl 1000 -t 0 -th 0:0:0"
+
+
+--nopreview 	不显示预览窗口
+-w 600		设置图像宽度
+-h 500		设置图像高度
+-ex auto	自动曝光模式
+-co 0 		设置图像对比度
+-q 10		设置图像品质
+-o		设置图像输出文件名 
+-tl 1000 	间隔拍摄时间 1s
+-t 0		拍照和关闭时的延时时间
+-th 0:0:0	设置预览图（小图）参数（X：Y：质量）
