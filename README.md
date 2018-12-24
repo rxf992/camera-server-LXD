@@ -1,8 +1,8 @@
 #Remote Painting Machine
 
-##### This project builds up a distributed system which streams live image from 3 cameras in 3 remote locations over the internet. A computer-vision application paints the results using 3 robotic painting machines in a gallery space.
+##### This project builds up a distributed system which streams live image from up to 3 cameras in 3 remote locations over the internet. A computer-vision application paints the results using 3 robotic painting machines in a gallery space.
 
-NOTE: Te project has been tested on a raspberry pi B for the camera app, centos OS server (main online bridge server) and ubuntu-gnome 15.10 for the computer vision.
+NOTE: Te project has been tested on a raspberry pi 3B/B+ for the camera app, Ubuntu 18.04LTS Server with root.
 
 ### The System:
 
@@ -45,12 +45,8 @@ Clone the repository on each device (raspberry pi, online server and computer to
 		$sudo npm install
 		$sudo npm install -g forever
         
-		$check if the deployment is ready with cmd:
-		$"nodejs app.js cam1"
-        
-		$crontab -u pi -e
-		add the following text:
-		@reboot /usr/bin/sudo -u pi -H /usr/local/bin/forever start /home/pi/remotePaintingMachine/camera/app.js cam1
+		check if the deployment is ready with cmd:
+		"nodejs app.js cam1"
 
 
 Make sure you first modify app.js to POST images to your own server. Open the app.js file and change the following line (replacing SEVER_PUBLIC_IP with your server's address): 
