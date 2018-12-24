@@ -44,7 +44,7 @@ Clone the repository on each device (raspberry pi, online server and computer to
         
 		$sudo npm install
 		$sudo npm install -g forever
-        $
+        
 		$check if the deployment is ready with cmd:
 		$"nodejs app.js cam1"
         
@@ -53,7 +53,7 @@ Clone the repository on each device (raspberry pi, online server and computer to
 		@reboot /usr/bin/sudo -u pi -H /usr/local/bin/forever start /home/pi/remotePaintingMachine/camera/app.js cam1
 
 
-Make sure you first modify app.js to POST images to your own server. Open the app.js file and change the following line (replacing http://192.168.0.102 with your server's address): 
+Make sure you first modify app.js to POST images to your own server. Open the app.js file and change the following line (replacing SEVER_PUBLIC_IP with your server's address): 
 
 		var url = "http://SEVER_PUBLIC_IP:3333/stream?id=" + id;
 
