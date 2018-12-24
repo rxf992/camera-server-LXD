@@ -50,17 +50,17 @@ app.post('/stream', multipartMiddleware, function(req, res) {
 // });
 
 app.get('/cam1', function(req, res) {
-    var img = fs.readFileSync('./uploads/cam1/cam1.jpg');
+    var img = fs.readFileSync(__dirname+'/uploads/cam1/cam1.jpg');
     res.writeHead(200, { 'Content-Type': 'image/jpg' });
     res.end(img, 'binary');
 });
 app.get('/cam2', function(req, res) {
-    var img = fs.readFileSync('./uploads/cam2/cam2.jpg');
+    var img = fs.readFileSync(__dirname+'/uploads/cam2/cam2.jpg');
     res.writeHead(200, { 'Content-Type': 'image/jpg' });
     res.end(img, 'binary');
 });
 app.get('/cam3', function(req, res) {
-    var img = fs.readFileSync('./uploads/cam3/cam3.jpg');
+    var img = fs.readFileSync(__dirname+'/uploads/cam3/cam3.jpg');
     res.writeHead(200, { 'Content-Type': 'image/jpg' });
     res.end(img, 'binary');
 });
